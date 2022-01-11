@@ -37,7 +37,7 @@
     <style name="txtSelection">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:text">@string/NumeroSelecionado</item>
+        <item name="android:text">@string/NumeroNaoSelecionado</item>
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:layout_marginTop">15dp</item>

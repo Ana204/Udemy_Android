@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">chooseNumber</string>
-    <string name="txtTitle">Escolha um número de 0 a 10!</string>
+    <string name="txtTitle">Escolha um número de 0 a 10</string>
     <string name="jogar">Jogar</string>
-    <string name="NumeroSelecionado">Nenhum numero selecionado</string>
+    <string name="NumeroNaoSelecionado">Nenhum numero selecionado</string>
+    <string name="NumeroSelecionado">Numero selecionado:</string>
 </resources>
