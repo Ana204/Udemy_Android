@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">appNoticia</string>
+    <string name="txtLorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel urna velit. Quisque scelerisque, leo eu tristique consectetur, nisi dolor condimentum nibh, ut vestibulum nibh purus rutrum nisl. In imperdiet metus quis nulla mattis finibus. Etiam pretium justo ac volutpat aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent cursus bibendum nulla et maximus. In fermentum egestas ex vitae pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
 </resources>
