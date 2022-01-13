@@ -13,5 +13,22 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="txtTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/cobraKai_title</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textColor">@color/yellow</item>
+        <item name="android:layout_marginTop">17dp</item>
+        <item name="android:fontFamily">@font/permanentmarker_regular</item>
+    </style>
 
+    <style name="txtSeason">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/txtSeason</item>
+        <item name="android:textColor">@color/darker_gray</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
 </resources>
