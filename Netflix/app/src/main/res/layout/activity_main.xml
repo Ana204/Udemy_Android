@@ -16,6 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/txtSeason"
         style="@style/txtSeason"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,6 +49,35 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.9" />
+
+    <ImageView
+        android:id="@+id/imgMessage"
+        android:src="@drawable/ic_message"
+        style="@style/Imagens"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/txtSeason"
+        />
+
+    <ImageView
+        android:src="@drawable/ic_volume"
+        style="@style/Imagens"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/txtSeason"
+        />
+
+    <ImageView
+        android:src="@drawable/ic_star"
+        style="@style/Imagens"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/txtSeason"
+        />
+
+    <ImageView
+        android:src="@drawable/ic_content_"
+        style="@style/Imagens"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/txtSeason"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
