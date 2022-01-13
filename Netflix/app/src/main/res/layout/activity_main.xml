@@ -52,32 +52,35 @@
 
     <ImageView
         android:id="@+id/imgMessage"
+        style="@style/Imagens"
+        android:contentDescription="@string/menu_menssage"
         android:src="@drawable/ic_message"
-        style="@style/Imagens"
         app:layout_constraintStart_toStartOf="@id/guideline1"
-        app:layout_constraintTop_toBottomOf="@id/txtSeason"
-        />
+        app:layout_constraintTop_toBottomOf="@id/txtSeason" />
 
     <ImageView
+        android:id="@+id/imgValume"
+        style="@style/Imagens"
+        android:contentDescription="@string/menu_volume"
         android:src="@drawable/ic_volume"
-        style="@style/Imagens"
         app:layout_constraintStart_toStartOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@id/txtSeason"
-        />
+        app:layout_constraintTop_toBottomOf="@id/txtSeason" />
 
     <ImageView
+        android:id="@+id/imgStar"
+        style="@style/Imagens"
+        android:contentDescription="@string/menu_star"
         android:src="@drawable/ic_star"
-        style="@style/Imagens"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
-        app:layout_constraintTop_toBottomOf="@id/txtSeason"
-        />
+        app:layout_constraintTop_toBottomOf="@id/txtSeason" />
 
     <ImageView
-        android:src="@drawable/ic_content_"
+        android:id="@+id/imgContent"
         style="@style/Imagens"
+        android:contentDescription="@string/menu_content"
+        android:src="@drawable/ic_content_"
         app:layout_constraintEnd_toEndOf="@id/guideline4"
-        app:layout_constraintTop_toBottomOf="@id/txtSeason"
-        />
+        app:layout_constraintTop_toBottomOf="@id/txtSeason" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
