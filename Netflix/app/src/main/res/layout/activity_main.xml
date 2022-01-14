@@ -1,97 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context=".MainActivity">
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/Title"
-        style="@style/txtTitle"
-        app:drawableTopCompat="@drawable/ic_arrow_back"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txtSeason"
-        style="@style/txtSeason"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Title" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.10462287" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.35" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.65" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
-
-    <ImageView
-        android:id="@+id/imgMessage"
-        style="@style/Imagens"
-        android:contentDescription="@string/menu_menssage"
-        android:src="@drawable/ic_message"
-        app:layout_constraintStart_toStartOf="@id/guideline1"
-        app:layout_constraintTop_toBottomOf="@id/txtSeason" />
-
-    <ImageView
-        android:id="@+id/imgValume"
-        style="@style/Imagens"
-        android:contentDescription="@string/menu_volume"
-        android:src="@drawable/ic_volume"
-        app:layout_constraintStart_toStartOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@id/txtSeason" />
-
-    <ImageView
-        android:id="@+id/imgStar"
-        style="@style/Imagens"
-        android:contentDescription="@string/menu_star"
-        android:src="@drawable/ic_star"
-        app:layout_constraintEnd_toEndOf="@id/guideline3"
-        app:layout_constraintTop_toBottomOf="@id/txtSeason" />
-
-    <ImageView
-        android:id="@+id/imgContent"
-        style="@style/Imagens"
-        android:contentDescription="@string/menu_content"
-        android:src="@drawable/ic_content_"
-        app:layout_constraintEnd_toEndOf="@id/guideline4"
-        app:layout_constraintTop_toBottomOf="@id/txtSeason" />
-
-    <ImageView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/cobrakai"
-        android:layout_marginTop="52dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtSeason"
-        />
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".MainActivity">
 
+        <TextView
+            android:id="@+id/Title"
+            style="@style/txtTitle"
+            app:drawableTopCompat="@drawable/ic_arrow_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/txtSeason"
+            style="@style/txtSeason"
+            android:text="@string/txtSeason"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Title" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.10462287" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <ImageView
+            android:id="@+id/imgMessage"
+            style="@style/Imagens"
+            android:contentDescription="@string/menu_menssage"
+            android:src="@drawable/ic_message"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/txtSeason" />
+
+        <ImageView
+            android:id="@+id/imgValume"
+            style="@style/Imagens"
+            android:contentDescription="@string/menu_volume"
+            android:src="@drawable/ic_volume"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/txtSeason" />
+
+        <ImageView
+            android:id="@+id/imgStar"
+            style="@style/Imagens"
+            android:contentDescription="@string/menu_star"
+            android:src="@drawable/ic_star"
+            app:layout_constraintEnd_toEndOf="@id/guideline3"
+            app:layout_constraintTop_toBottomOf="@id/txtSeason" />
+
+        <ImageView
+            android:id="@+id/imgContent"
+            style="@style/Imagens"
+            android:contentDescription="@string/menu_content"
+            android:src="@drawable/ic_content_"
+            app:layout_constraintEnd_toEndOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/txtSeason" />
+
+        <ImageView
+            android:id="@+id/imageCobraKai"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginTop="52dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cobrakai"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtSeason"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/txtTempoAssistido"
+            style="@style/txtSeason"
+            android:text="@string/tempoAssistido"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/imageCobraKai" />
+
+        <TextView
+            android:id="@+id/txtTempoTotal"
+            style="@style/txtSeason"
+            android:text="@string/tempoTotal"
+            app:layout_constraintEnd_toEndOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/imageCobraKai" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@id/txtTempoTotal"
+            app:layout_constraintStart_toEndOf="@id/txtTempoAssistido"
+            app:layout_constraintTop_toBottomOf="@id/imageCobraKai" />
+
+        <ImageView
+            style="@style/Imagens"
+            android:src="@drawable/ic_settings_backup_restore"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/seekbar"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            style="@style/Imagens"
+            android:src="@drawable/ic_pause"
+            app:layout_constraintEnd_toEndOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/seekbar"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            style="@style/Imagens"
+            android:src="@drawable/ic_play_arrow"
+            app:layout_constraintEnd_toEndOf="@id/guideline3"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/seekbar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
