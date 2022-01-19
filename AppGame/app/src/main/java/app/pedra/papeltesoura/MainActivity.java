@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     ImageView imgPedra, imgPapel, imgtesoura;
@@ -25,7 +27,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void opcaoSelecionada(String opcaoSelecionada){
-        System.out.println(opcaoSelecionada);
+
+
+        int numero = new Random().nextInt(3);
+        String[] opcoes = {"PEDRA", "PAPEL", "TESOURA"};
+        String opcoesApp = opcoes[numero];
+
+        System.out.println(opcoesApp);
     }
 
     public void SelecionadoPedra(){
