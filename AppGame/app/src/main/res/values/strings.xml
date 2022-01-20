@@ -2,4 +2,5 @@
     <string name="app_name">PedraPapelTesoura</string>
     <string name="vamos_jogar">VAMOS JOGAR?</string>
     <string name="escolhaOpcao">Escolha uma opção abaixo</string>
+    <string name="voce_perdeu">\"Você perdeu :( \"</string>
 </resources>
