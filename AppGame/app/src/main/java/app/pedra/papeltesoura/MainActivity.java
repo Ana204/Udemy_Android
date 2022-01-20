@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             txtInfo.setText(R.string.voce_ganhou);
             txtInfo.setTextColor(Color.GREEN);
         }else {//Empate
-            txtInfo.setText("Empatamos ;) ");
+            txtInfo.setText(R.string.empate);
             txtInfo.setTextColor(Color.BLACK);
         }
 
