@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 (escolhaUsuario.equals("PAPEL") && escolhaApp.equals("PEDRA")) ||
                 (escolhaUsuario=="TESOURA" && escolhaApp=="PAPEL")
         ){//Usuario ganhador
-            txtInfo.setText("Você ganhou :) ");
+            txtInfo.setText(R.string.voce_ganhou);
             txtInfo.setTextColor(Color.GREEN);
         }else {//Empate
             txtInfo.setText("Empatamos ;) ");

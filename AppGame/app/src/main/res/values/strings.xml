@@ -3,4 +3,5 @@
     <string name="vamos_jogar">VAMOS JOGAR?</string>
     <string name="escolhaOpcao">Escolha uma opção abaixo</string>
     <string name="voce_perdeu">\"Você perdeu :( \"</string>
+    <string name="voce_ganhou">\"Você ganhou :) \"</string>
 </resources>
