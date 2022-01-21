@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">componentes</string>
+    <string name="enviar">ENVIAR</string>
+    <string name="digite_seu_email">Digite seu email</string>
+    <string name="digite_seu_nome">Digite seu nome</string>
+    <string name="resultado">Resultado</string>
 </resources>
