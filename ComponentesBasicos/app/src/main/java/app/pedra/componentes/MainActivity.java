@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                checkbox();
+
 /*                String nome = edtNome.getText().toString();
                 String email = edtEmail.getText().toString();
 
@@ -48,6 +50,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void checkbox(){
+
+        boolean ckeckAzul = azul.isChecked();
+        boolean ckeckVermelho = vermelho.isChecked();
+
+        String texto = "";
+        if ( verde.isChecked()){
+            String corSelecionada = verde.getText().toString();
+            texto = corSelecionada;
+            //texto = "VERDE SELECIONADO - ";
+        }
+        if (ckeckAzul){
+            texto = texto + "AZUL SELECIONADO - ";
+        }
+        if (ckeckVermelho){
+            texto = texto + "VERMELHO SELECIONADO - ";
+        }
+
+        edtResultado.setText(texto);
 
     }
 }
