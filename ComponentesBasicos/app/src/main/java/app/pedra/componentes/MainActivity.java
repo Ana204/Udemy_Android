@@ -1,6 +1,7 @@
 package app.pedra.componentes;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatCheckBox;
 
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     TextInputEditText edtEmail;
     Button ButtonEnviar;
     TextView edtResultado;
+    AppCompatCheckBox verde,azul,vermelho;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,17 +30,24 @@ public class MainActivity extends AppCompatActivity {
         edtEmail = findViewById(R.id.edtEmail);
         ButtonEnviar = findViewById(R.id.ButtonEnviar);
         edtResultado = findViewById(R.id.edtResultado);
+        verde = findViewById(R.id.verde);
+        azul = findViewById(R.id.azul);
+        vermelho = findViewById(R.id.vermelho);
 
 
         ButtonEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                String nome = edtNome.getText().toString();
+/*                String nome = edtNome.getText().toString();
                 String email = edtEmail.getText().toString();
 
-                edtResultado.setText("Nome: "+ nome + "Email: " + email);
+                edtResultado.setText("Nome: "+ nome + "Email: " + email);*/
             }
         });
+    }
+
+    public void checkbox(){
+
     }
 }

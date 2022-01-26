@@ -32,6 +32,38 @@
             android:hint="@string/digite_seu_email" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cores_do_painel"
+        android:layout_marginStart="16dp"
+        android:textSize="16sp"
+        />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/verde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/verde"
+        />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/azul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/azul"
+        />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/vermelho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/vermelho"
+        />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/ButtonEnviar"
         android:layout_width="match_parent"

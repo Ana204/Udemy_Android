@@ -4,4 +4,8 @@
     <string name="digite_seu_email">Digite seu email</string>
     <string name="digite_seu_nome">Digite seu nome</string>
     <string name="resultado">Resultado</string>
+    <string name="cores_do_painel">CORES DO PAINEL</string>
+    <string name="verde">VERDE</string>
+    <string name="azul">AZUL</string>
+    <string name="vermelho">VERMELHO</string>
 </resources>
