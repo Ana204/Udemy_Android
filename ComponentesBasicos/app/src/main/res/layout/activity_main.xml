@@ -79,6 +79,7 @@
         />
 
     <RadioGroup
+        android:id="@+id/RadioGroupSexo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

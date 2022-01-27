@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     TextView edtResultado;
     AppCompatCheckBox verde,azul,vermelho;
     RadioButton RadioButtonFeminino, RadioButtonMasculino;
+    RadioGroup RadioGroupSexo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,19 +39,36 @@ public class MainActivity extends AppCompatActivity {
         vermelho = findViewById(R.id.vermelho);
         RadioButtonFeminino = findViewById(R.id.RadioButtonFeminino);
         RadioButtonMasculino = findViewById(R.id.RadioButtonMasculino);
+        RadioGroupSexo = findViewById(R.id.RadioGroupSexo);
 
+        RadioGrup();
 
         ButtonEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                RadioButton();
+                //RadioButton();
                 //checkbox();
 
 /*                String nome = edtNome.getText().toString();
                 String email = edtEmail.getText().toString();
 
                 edtResultado.setText("Nome: "+ nome + "Email: " + email);*/
+            }
+        });
+    }
+
+    //ouvindo por mudança, se ouve alteração nas opções
+    public void RadioGrup(){
+        RadioGroupSexo.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
+
+                if (checkedId == R.id.RadioButtonFeminino){
+                    edtResultado.setText("FEMININO");
+                }else if (checkedId == R.id.RadioButtonMasculino){
+                    edtResultado.setText("MASCULINO");
+                }
             }
         });
     }
