@@ -18,67 +18,78 @@
         android:id="@+id/textSlogan"
         style="@style/TextView"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/slogan"
         android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgLogo" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txtAlcool"
-        style="@style/TextView"
-        android:layout_marginStart="16dp"
-        android:text="@string/alcool"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textSlogan" />
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/editAlcool"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:inputType="numberDecimal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtAlcool" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txtGasolina"
-        style="@style/TextView"
-        android:layout_marginStart="16dp"
-        android:text="@string/gasolina"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editAlcool" />
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/editGasolina"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:inputType="numberDecimal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtGasolina" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnCalcular"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/calcular"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editGasolina"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textSlogan">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/resultado"
-        style="@style/TextView"
-        android:text="Resultado"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editAlcool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:inputType="numberDecimal"
+            android:hint="@string/alcool"
+            android:background="@color/white"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnCalcular" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editGasolina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:inputType="numberDecimal"
+            android:hint="@string/gasolina"
+            android:background="@color/white"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCalcular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/calcular"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtInput"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/resultado"
+            style="@style/TextView"
+            android:text="Resultado"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnCalcular" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
