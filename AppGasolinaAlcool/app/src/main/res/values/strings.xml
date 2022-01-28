@@ -3,4 +3,5 @@
     <string name="slogan">Saiba a melhor opção de abastecimento do seu carro!</string>
     <string name="alcool">Preço álcool ex: 1.90</string>
     <string name="gasolina">Preço gasolina ex: 2.60</string>
+    <string name="calcular">CALCULAR</string>
 </resources>
