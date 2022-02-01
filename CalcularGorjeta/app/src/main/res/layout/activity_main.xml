@@ -27,6 +27,7 @@
         app:layout_constraintTop_toBottomOf="@id/imgLogo">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/valorConta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -52,6 +53,7 @@
         />
 
     <SeekBar
+        android:id="@+id/seekBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="6dp"
@@ -75,7 +77,7 @@
         app:layout_constraintTop_toBottomOf="@id/porcentagem" />
 
     <TextView
-        android:id="@+id/valor"
+        android:id="@+id/valorDaGorjeta"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -90,7 +92,7 @@
         app:layout_constraintTop_toBottomOf="@id/porcentagem" />
 
     <TextView
-        android:id="@+id/valorTotal"
+        android:id="@+id/Total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -103,7 +105,7 @@
 
 
     <TextView
-        android:id="@+id/total"
+        android:id="@+id/valorTotal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -113,8 +115,8 @@
         android:textSize="17sp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/valor"
-        app:layout_constraintTop_toBottomOf="@id/valor" />
+        app:layout_constraintStart_toStartOf="@id/valorDaGorjeta"
+        app:layout_constraintTop_toBottomOf="@id/valorDaGorjeta" />
 
 
 
