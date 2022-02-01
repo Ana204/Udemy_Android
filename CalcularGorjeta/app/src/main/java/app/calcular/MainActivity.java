@@ -18,5 +18,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        valorConta = findViewById(R.id.valorConta);
+        porcentagem = findViewById(R.id.porcentagem);
+        valorDaGorjeta = findViewById(R.id.valorDaGorjeta);
+        valorTotal = findViewById(R.id.valorTotal);
+        seekBar = findViewById(R.id.seekBar);
     }
 }
