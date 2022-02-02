@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -49,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calcular(){
+
+        String valorDaConta = valorConta.getText().toString();
+
+    if (valorDaConta == null || valorDaConta.equals("") || valorDaConta.equals(".")){
+            Toast.makeText(MainActivity.this, "Digite o valor da sua conta", Toast.LENGTH_LONG).show();
+    }else {
+        double valorconta = Double.parseDouble(valorDaConta);
+    }
 
     }
 }
