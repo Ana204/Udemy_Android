@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     TextView porcentagem, valorDaGorjeta, valorTotal;
     SeekBar seekBar;
 
+    double valorporcentagem = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,5 +26,22 @@ public class MainActivity extends AppCompatActivity {
         valorDaGorjeta = findViewById(R.id.valorDaGorjeta);
         valorTotal = findViewById(R.id.valorTotal);
         seekBar = findViewById(R.id.seekBar);
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
     }
 }
