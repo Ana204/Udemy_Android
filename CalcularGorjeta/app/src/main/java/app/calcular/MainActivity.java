@@ -57,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "Digite o valor da sua conta", Toast.LENGTH_LONG).show();
     }else {
         double valorconta = Double.parseDouble(valorDaConta);
+
+        double gorjeta = valorconta * (valorporcentagem/100);
+        valorDaGorjeta.setText("R$ " + Math.round(gorjeta));
+
+        double valorTotalDaConta = valorconta + gorjeta;
+        valorTotal.setText("R$ " + valorTotalDaConta);
+
     }
 
     }
