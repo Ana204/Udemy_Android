@@ -3,6 +3,7 @@ package app.calcular;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -30,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
-
+                valorporcentagem = progress;
+                porcentagem.setText(Math.round(valorporcentagem) + "%");
+                calcular();
             }
 
             @Override
@@ -43,5 +46,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void calcular(){
+
     }
 }
