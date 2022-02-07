@@ -37,6 +37,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
         public MyViewHolder(View itemView) {
             super(itemView);
+
+            titulo = itemView.findViewById(R.id.textTitulo);
+            ano = itemView.findViewById(R.id.textAno);
+            genero = itemView.findViewById(R.id.textGenero);
         }
     }
 }
