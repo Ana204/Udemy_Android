@@ -8,9 +8,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 import app.recyclerview.R;
+import app.recyclerview.model.Filme;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
+
+    private List<Filme> listaFilmes;
+
+    public Adapter(List<Filme> lista) {
+        listaFilmes = lista;
+    }
 
     @NonNull
     @Override
