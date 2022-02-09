@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onLongItemClick(View view, int position) {
-
+                        Toast.makeText(MainActivity.this, "ITEM CLICADO LONGO", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
