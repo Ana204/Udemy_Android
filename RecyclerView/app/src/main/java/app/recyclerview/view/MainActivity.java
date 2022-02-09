@@ -57,7 +57,9 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onLongItemClick(View view, int position) {
-                        Toast.makeText(MainActivity.this, "ITEM CLICADO LONGO", Toast.LENGTH_LONG).show();
+                        Filme filme = listaFilmes.get(position);
+
+                        Toast.makeText(MainActivity.this, "item selecionado: " + filme.getTituloFilme(), Toast.LENGTH_LONG).show();
                     }
 
                     @Override
