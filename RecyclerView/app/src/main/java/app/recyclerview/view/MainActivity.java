@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         recyclerView = findViewById(R.id.recyclerView);
         Adapter adapter = new Adapter( listaFilmes );
 
@@ -49,7 +50,9 @@ public class MainActivity extends AppCompatActivity {
                 new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-                        Toast.makeText(MainActivity.this, "ITEM CLICADO", Toast.LENGTH_LONG).show();
+                        Filme filme = listaFilmes.get(position);
+
+                        Toast.makeText(MainActivity.this, "item selecionado: " + filme.getTituloFilme(), Toast.LENGTH_LONG).show();
                     }
 
                     @Override
