@@ -1,10 +1,12 @@
-package app.view.cardview;
+package app.view.cardview.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+
+import app.view.cardview.R;
 
 public class MainActivity extends AppCompatActivity {
 
