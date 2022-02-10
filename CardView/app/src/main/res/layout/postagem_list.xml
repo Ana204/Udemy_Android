@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
     android:orientation="vertical"
     >
 
@@ -25,6 +26,7 @@
                 />
 
             <TextView
+                android:id="@+id/dataDaPublicacao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Agora mesmo"
@@ -32,6 +34,7 @@
                 />
 
             <ImageView
+                android:id="@+id/imgPostagem"
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
                 android:src="@drawable/mario"
@@ -39,6 +42,7 @@
                 />
 
             <TextView
+                android:id="@+id/textPostagem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Bonecos legais !!"
@@ -53,12 +57,14 @@
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonCurtir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonComentar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
