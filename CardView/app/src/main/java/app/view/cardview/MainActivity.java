@@ -1,6 +1,7 @@
 package app.view.cardview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -15,6 +16,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         recyclerViewPostagem = findViewById(R.id.recyclerViewPostagem);
+
+        //definir layout
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerViewPostagem.setLayoutManager(layoutManager);
+
+        //definir adapter
+        //recyclerViewPostagem.setAdapter( );
 
     }
 }
