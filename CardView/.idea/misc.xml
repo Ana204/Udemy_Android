@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/savas/AndroidStudioProjects/Udemy_Android/CardView/app/src/main/res/drawable/ic_chat_bubble.xml" value="0.2203125" />
+        <entry key="..\:/Users/savas/AndroidStudioProjects/Udemy_Android/CardView/app/src/main/res/drawable/ic_favorite.xml" value="0.2203125" />
         <entry key="..\:/Users/savas/AndroidStudioProjects/Udemy_Android/CardView/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/savas/AndroidStudioProjects/Udemy_Android/CardView/app/src/main/res/layout/postagem_list.xml" value="0.25" />
       </map>
