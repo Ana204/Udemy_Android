@@ -65,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Gostei"
+                android:text="@string/gostei"
                 android:drawableStart="@drawable/ic_favorite"
                 style="?attr/buttonBarButtonStyle"
                 />
@@ -75,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Comentar"
+                android:text="@string/comentar"
                 android:drawableStart="@drawable/ic_chat_bubble"
                 style="?attr/buttonBarButtonStyle"
                 />
