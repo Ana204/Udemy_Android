@@ -3,11 +3,9 @@ package app.view.cardview.view;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
-
 import app.view.cardview.R;
-import app.view.cardview.adapter.AdapterPostagem;
+import app.view.cardview.adapter.PostagemAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewPostagem.setLayoutManager(layoutManager);
 
         //definir adapter
-        AdapterPostagem adapter = new AdapterPostagem();
+        PostagemAdapter adapter = new PostagemAdapter();
         recyclerViewPostagem.setAdapter( adapter);
 
     }

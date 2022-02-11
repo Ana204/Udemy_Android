@@ -11,7 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import app.view.cardview.R;
 
-public class AdapterPostagem extends RecyclerView.Adapter<AdapterPostagem.MyViewHolder> {
+public class PostagemAdapter extends RecyclerView.Adapter<PostagemAdapter.MyViewHolder> {
+
 
     @NonNull
     @Override
@@ -25,20 +26,27 @@ public class AdapterPostagem extends RecyclerView.Adapter<AdapterPostagem.MyView
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
+        holder.nome.setText("Ana Lucia Gomes");
+        holder.textPostagem.setText("#tbt Viagem legall !!");
+        holder.imgPostagem.setImageResource(R.drawable.paisagem3);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return 5;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        private TextView nome;
-        private TextView postagem;
-        private ImageView imagem;
+
+        TextView nome, textPostagem;
+        ImageView imgPostagem;
 
         public MyViewHolder(View itemView) {
             super(itemView);
+
+            nome = itemView.findViewById(R.id.nome);
+            textPostagem = itemView.findViewById(R.id.textPostagem);
+            imgPostagem = itemView.findViewById(R.id.imgPostagem);
         }
     }
 }
