@@ -18,9 +18,10 @@ public class PostagemAdapter extends RecyclerView.Adapter<PostagemAdapter.MyView
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View itemLista = LayoutInflater.from(parent.getContext()).inflate(R.layout.postagem_list, parent, false);
+       // View itemLista = LayoutInflater.from(parent.getContext()).inflate(R.layout.postagem_list, parent, false);
 
-        return new MyViewHolder(itemLista);
+       // return new MyViewHolder(itemLista);
+        return null;
     }
 
     @Override
@@ -33,7 +34,7 @@ public class PostagemAdapter extends RecyclerView.Adapter<PostagemAdapter.MyView
 
     @Override
     public int getItemCount() {
-        return 5;
+        return 0;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
@@ -44,9 +45,9 @@ public class PostagemAdapter extends RecyclerView.Adapter<PostagemAdapter.MyView
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            nome = itemView.findViewById(R.id.nome);
+/*            nome = itemView.findViewById(R.id.nome);
             textPostagem = itemView.findViewById(R.id.textPostagem);
-            imgPostagem = itemView.findViewById(R.id.imgPostagem);
+            imgPostagem = itemView.findViewById(R.id.imgPostagem);*/
         }
     }
 }
