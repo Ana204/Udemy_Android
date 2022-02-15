@@ -27,7 +27,7 @@ public class PostagemAdapter extends RecyclerView.Adapter<PostagemAdapter.MyView
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.nome.setText("ANA LUCIA GOMES");
         holder.textPostagem.setText("#tbt VIAGEM INCRIIIVEL !!");
-        holder.imgPostagem.setImageResource(R.drawable.paisagem2);
+        holder.imgPostagem.setImageResource(R.drawable.floresta);
     }
 
     @Override
