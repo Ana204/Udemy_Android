@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     AppCompatButton buttonJogar;
@@ -25,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this, ResultadoActivity.class);
+
+                //Passar dados para a proxima tela
+                int numero = new Random().nextInt(2);
+                intent.putExtra("numero", numero);
+
                 startActivity(intent);
 
             }
