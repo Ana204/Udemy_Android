@@ -1,8 +1,10 @@
-package app.mobile.fragments;
+package app.mobile.fragments.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import app.mobile.fragments.R;
 
 public class MainActivity extends AppCompatActivity {
 
