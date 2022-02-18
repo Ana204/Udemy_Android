@@ -62,11 +62,18 @@ public class MainActivity extends AppCompatActivity {
         buttonGerar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(
+               Snackbar snackbar =  Snackbar.make(
                         view,
                         "Botão pressionado",
-                        Snackbar.LENGTH_LONG
-                ).show();
+                        Snackbar.LENGTH_INDEFINITE
+                ).setAction("Confirmar", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        buttonGerar.setText("BOTÃO CONFIRMADO");
+                    }
+                });
+
+               snackbar.show();
             }
         });
     }
