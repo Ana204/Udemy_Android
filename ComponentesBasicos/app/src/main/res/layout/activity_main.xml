@@ -115,5 +115,13 @@
         android:textSize="20sp"
         android:layout_margin="10dp"
         />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonGerar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/gerar"
+        />
 </LinearLayout>
 </ScrollView>

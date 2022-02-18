@@ -11,13 +11,14 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText edtNome;
     TextInputEditText edtEmail;
-    Button ButtonEnviar;
+    Button ButtonEnviar, buttonGerar;
     TextView edtResultado;
     AppCompatCheckBox verde,azul,vermelho;
     RadioButton RadioButtonFeminino, RadioButtonMasculino;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         RadioButtonFeminino = findViewById(R.id.RadioButtonFeminino);
         RadioButtonMasculino = findViewById(R.id.RadioButtonMasculino);
         RadioGroupSexo = findViewById(R.id.RadioGroupSexo);
+        buttonGerar = findViewById(R.id.buttonGerar);
 
         RadioGrup();
 
@@ -54,6 +56,17 @@ public class MainActivity extends AppCompatActivity {
                 String email = edtEmail.getText().toString();
 
                 edtResultado.setText("Nome: "+ nome + "Email: " + email);*/
+            }
+        });
+
+        buttonGerar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(
+                        view,
+                        "Botão pressionado",
+                        Snackbar.LENGTH_LONG
+                ).show();
             }
         });
     }
@@ -108,4 +121,6 @@ public class MainActivity extends AppCompatActivity {
         edtResultado.setText(texto);
 
     }
+
+
 }
