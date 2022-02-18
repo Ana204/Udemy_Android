@@ -15,6 +15,7 @@
         app:layout_constraintGuide_percent="0.50121653" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonConversas"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Conversas"
@@ -27,6 +28,7 @@
         />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonContato"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Contatos"
@@ -39,6 +41,7 @@
         />
 
     <FrameLayout
+        android:id="@+id/FrameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="53dp"
