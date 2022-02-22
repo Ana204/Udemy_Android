@@ -12,8 +12,9 @@
     <string name="menu_principal">Principal</string>
     <string name="menu_servicos">Serviços</string>
     <string name="menu_clientes">Clientes</string>
-    <string name="meu_email">Email</string>
-    <string name="meu_sobre">Sobre</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="menu_email">Email</string>
+    <string name="menu_sobre">Sobre</string>
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

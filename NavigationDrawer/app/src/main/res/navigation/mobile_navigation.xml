@@ -3,12 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_principal">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="app.mobile.navigationdrawer.ui."
+        android:id="@+id/nav_principal"
+        android:name="app.mobile.navigationdrawer.ui.principal.PrincipalFragment"
         android:label="@string/menu_principal"
         tools:layout="@layout/fragment_principal" />
+
+    <fragment
+        android:id="@+id/nav_servicos"
+        android:name="app.mobile.navigationdrawer.ui.servicos.ServicosFragment"
+        android:label="@string/menu_servicos"
+        tools:layout="@layout/fragment_servicos" />
+
+    <fragment
+        android:id="@+id/nav_clientes"
+        android:name="app.mobile.navigationdrawer.ui.clientes.ClientesFragment"
+        android:label="@string/menu_clientes"
+        tools:layout="@layout/fragment_clientes" />
+
+    <fragment
+        android:id="@+id/menu_contato"
+        android:name="app.mobile.navigationdrawer.ui.contato.ContatoFragment"
+        android:label="@string/menu_email"
+        tools:layout="@layout/fragment_contato" />
+
+    <fragment
+        android:id="@+id/menu_sobre"
+        android:name="app.mobile.navigationdrawer.ui.sobre.SobreFragment"
+        android:label="@string/menu_sobre"
+        tools:layout="@layout/fragment_sobre" />
 
 </navigation>

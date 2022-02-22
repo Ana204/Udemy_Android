@@ -23,12 +23,12 @@
             <item
                 android:id="@+id/menu_contato"
                 android:icon="@drawable/ic_menu_email"
-                android:title="@string/meu_email"
+                android:title="@string/menu_email"
                 />
             <item
                 android:id="@+id/menu_sobre"
                 android:icon="@drawable/ic_menu_info"
-                android:title="@string/meu_sobre"
+                android:title="@string/menu_sobre"
                 />
 
         </menu>
