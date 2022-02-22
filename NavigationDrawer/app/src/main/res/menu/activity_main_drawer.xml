@@ -18,15 +18,15 @@
             android:title="@string/menu_clientes" />
     </group>
 
-    <item android:title="Entre em contato">
+    <item android:title="@string/entre_em_contato">
         <menu>
             <item
-                android:id="@+id/menu_contato"
+                android:id="@+id/nav_contato"
                 android:icon="@drawable/ic_menu_email"
                 android:title="@string/menu_email"
                 />
             <item
-                android:id="@+id/menu_sobre"
+                android:id="@+id/nav_sobre"
                 android:icon="@drawable/ic_menu_info"
                 android:title="@string/menu_sobre"
                 />

@@ -17,4 +17,8 @@
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="entre_em_contato">Entre em contato</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget fringilla neque. Maecenas vel congue risus. Aliquam porta mauris vitae nibh pulvinar, vitae euismod libero posuere. Fusce vel libero id eros euismod ultricies. Suspendisse massa risus, ultrices tincidunt aliquam et, imperdiet eu ligula. Morbi tempus, dolor in pretium semper, turpis tellus euismod nisl, vitae porta lacus turpis tincidunt diam. Suspendisse nec semper metus.</string>
+    <string name="txtTitulo">Sistema de gestão de qualidade</string>
+    <string name="txtIndicadores">Indicadores de desempenho</string>
 </resources>
