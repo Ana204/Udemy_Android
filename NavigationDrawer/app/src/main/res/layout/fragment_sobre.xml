@@ -23,8 +23,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/txtTitulo"
             android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/txtLorem"
@@ -42,8 +41,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/txtIndicadores"
             android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/txtLorem2"
