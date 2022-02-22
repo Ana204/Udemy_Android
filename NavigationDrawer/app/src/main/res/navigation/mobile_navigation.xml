@@ -9,6 +9,6 @@
         android:id="@+id/nav_home"
         android:name="app.mobile.navigationdrawer.ui."
         android:label="@string/menu_principal"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_principal" />
 
 </navigation>
