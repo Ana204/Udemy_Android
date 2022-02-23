@@ -52,7 +52,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void EnviarEmail(){
         Intent intent = new Intent( Intent.ACTION_SEND);
-        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{ " " });
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{ "atentimento@atmconsultoria.com.br" });
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Contato pelo App");
+        intent.putExtra(Intent.EXTRA_TEXT, "Mensagem automática");
 
         startActivity(intent);
     }
