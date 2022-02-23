@@ -1,5 +1,7 @@
 package app.mobile.navigationdrawer;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -49,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void EnviarEmail(){
-
+        Intent intent = new Intent( Intent.ACTION_DIAL, Uri.parse("tel: 967769500"));
+        startActivity(intent);
     }
 
 /*    @Override
