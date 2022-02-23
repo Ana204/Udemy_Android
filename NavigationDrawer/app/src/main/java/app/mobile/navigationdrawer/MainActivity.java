@@ -56,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_SUBJECT, "Contato pelo App");
         intent.putExtra(Intent.EXTRA_TEXT, "Mensagem automática");
 
-        startActivity(intent);
+        intent.setType("message/rfc822");
+
+        startActivity(Intent.createChooser(intent, "Compartilhar"));
     }
 
 /*    @Override
