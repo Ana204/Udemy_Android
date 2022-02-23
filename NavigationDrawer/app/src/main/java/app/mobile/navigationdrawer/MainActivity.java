@@ -51,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void EnviarEmail(){
-        Intent intent = new Intent( Intent.ACTION_DIAL, Uri.parse("tel: 967769500"));
+        Intent intent = new Intent( Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{ " " });
+
         startActivity(intent);
     }
 
