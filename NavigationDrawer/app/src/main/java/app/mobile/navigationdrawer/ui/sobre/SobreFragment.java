@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import app.mobile.navigationdrawer.R;
 import mehdi.sakout.aboutpage.AboutPage;
+import mehdi.sakout.aboutpage.Element;
 
 
 public class SobreFragment extends Fragment {
@@ -29,6 +30,9 @@ public class SobreFragment extends Fragment {
                 "que desejam alcançar o sucesso atráves da exelência em gestão e " +
                 "da busca pela qualidade";
 
+        Element versao = new Element();
+        versao.setTitle("Versão 1.0");
+
         return new AboutPage(getActivity())
                 .setImage(R.drawable.logo)
                 .setDescription(descricao)
@@ -45,6 +49,7 @@ public class SobreFragment extends Fragment {
                 .addGitHub("Ana204", "GitHub")
                 .addPlayStore("com.facebook.katana", "Download App")
 
+                .addItem(versao)
                 .create();
     }
 }
