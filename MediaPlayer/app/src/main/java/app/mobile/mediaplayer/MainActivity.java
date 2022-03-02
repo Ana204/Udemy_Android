@@ -30,7 +30,28 @@ public class MainActivity extends AppCompatActivity {
         buttonPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (mediaPlayer != null){
+                    mediaPlayer.start();
+                }
+            }
+        });
 
+        buttonPause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mediaPlayer.isPlaying()){
+                    mediaPlayer.pause();
+                }
+            }
+        });
+
+        buttonStop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mediaPlayer.isPlaying()){
+                    mediaPlayer.stop();
+                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.musica);
+                }
             }
         });
 
