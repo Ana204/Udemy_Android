@@ -3,6 +3,8 @@ package app.mobile.mediaplayer;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.content.Context;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     AppCompatButton buttonPlay, buttonPause, buttonStop;
 
     MediaPlayer mediaPlayer;
+    AudioManager audioManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         buttonStop = findViewById(R.id.buttonStop);
 
         mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.musica);
+        Seekbar();
 
         buttonPlay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,4 +61,52 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void Seekbar(){
+
+        //configurar o audio manager
+        audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+
+        //recuperar os valores de volume maximo e o volume atual
+        int volumeMaximo = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+        int volumeAtual = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
+
+        //configurar os valores maximos para o Seekbar
+        seekbarVolume.setMax(volumeMaximo);
+        seekbarVolume.setProgress(volumeAtual);
+
+        seekbarVolume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, i , 0);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mediaPlayer != null && mediaPlayer.isPlaying()){
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mediaPlayer.isPlaying()){
+            mediaPlayer.pause();
+        }
+    }
 }
