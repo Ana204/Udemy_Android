@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A9000000"
+    android:background="#393939"
     tools:context=".MainActivity">
 
 
@@ -37,22 +37,11 @@
         android:id="@+id/ano"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2013"
+        android:text="2013    1 Temporada"
         android:textSize="17sp"
         android:textColor="@color/white"
         android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1 Temporada"
-        android:layout_marginStart="16dp"
-        android:textSize="17sp"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toEndOf="@id/ano"
         app:layout_constraintTop_toBottomOf="@id/titulo"
         />
 
@@ -61,12 +50,35 @@
         android:id="@+id/descricao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:text="@string/descricao"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ratingBar"
+        />
+
+    <ImageView
+        android:id="@+id/imagePlay"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageFundo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/play" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="4"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ano"
-        app:layout_constraintVertical_bias="0.171" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
