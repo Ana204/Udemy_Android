@@ -11,7 +11,9 @@
         android:theme="@style/Theme.ExecutandoVideo">
         <activity
             android:name=".PlayerActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape"
+            />
         <activity
             android:name=".MainActivity"
             android:exported="true">
