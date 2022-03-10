@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().setElevation(0);
+
         ViewPagerTab = findViewById(R.id.ViewPagerTab);
         ViewPager = findViewById(R.id.ViewPager);
 
