@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Public/AndroidStudioProjects/Udemy_Android/AbasSmartTableLayout/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Public/AndroidStudioProjects/Udemy_Android/AbasSmartTableLayout/app/src/main/res/layout/fragment_em_alta.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Public/AndroidStudioProjects/Udemy_Android/AbasSmartTableLayout/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Public/AndroidStudioProjects/Udemy_Android/AbasSmartTableLayout/app/src/main/res/layout/fragment_inscricoes.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
