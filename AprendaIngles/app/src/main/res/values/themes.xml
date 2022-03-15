@@ -5,7 +5,7 @@
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/purple_200</item>
-        <item name="android:colorBackground">@color/purple_100</item>
+        <item name="android:colorBackground">@color/white</item>
         
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
