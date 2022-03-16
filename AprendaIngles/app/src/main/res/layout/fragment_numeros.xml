@@ -16,9 +16,11 @@
 
     <ImageButton
         android:id="@+id/imageUm"
-        android:layout_width="169dp"
-        android:layout_height="167dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:src="@drawable/um"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,9 +28,11 @@
 
     <ImageButton
         android:id="@+id/imgDois"
-        android:layout_width="169dp"
-        android:layout_height="167dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:src="@drawable/dois"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintTop_toTopOf="parent"
@@ -36,37 +40,46 @@
 
     <ImageButton
         android:id="@+id/imageTres"
-        android:layout_width="167dp"
-        android:layout_height="167dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
         android:src="@drawable/tres"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toBottomOf="@id/imageUm"
         tools:ignore="ContentDescription" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imgQuatro"
-        android:layout_width="167dp"
-        android:layout_height="167dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
         android:src="@drawable/quatro"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintTop_toBottomOf="@id/imgDois"
         tools:ignore="ContentDescription" />
 
-    <ImageView
-        android:layout_width="167dp"
-        android:layout_height="167dp"
+    <ImageButton
+        android:id="@+id/imageSeis"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
         android:src="@drawable/cinco"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toBottomOf="@id/imageTres"
         tools:ignore="ContentDescription" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imgSeis"
-        android:layout_width="167dp"
-        android:layout_height="167dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
         android:src="@drawable/seis"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
