@@ -13,6 +13,64 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.BichosFragment">
 
+    <ImageView
+        android:id="@+id/imageUm"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/cao"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imgDois"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/gato"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageTres"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/leao"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/imageUm"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imgQuatro"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/macaco"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/imgDois"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ovelha"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/imageTres"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imgSeis"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/vaca"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/imgQuatro"
+        tools:ignore="ContentDescription" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
