@@ -11,24 +11,27 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_bichos"
     tools:context=".Fragments.BichosFragment">
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imageUm"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/cao"
         android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/cao"
         app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imgDois"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/gato"
         android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />

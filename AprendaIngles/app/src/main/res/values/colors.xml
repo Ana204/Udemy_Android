@@ -4,6 +4,7 @@
     <color name="purple_500">#4a148c</color>
     <color name="purple_700">#12005e</color>
     <color name="purple_100">#FFC4FF</color>
+    <color name="background_bichos">#f5e9b9</color>
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
