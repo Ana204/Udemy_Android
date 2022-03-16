@@ -12,8 +12,83 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_bichos"
     tools:context=".Fragments.VogaisFragment">
 
+
+    <ImageButton
+        android:id="@+id/imageUm"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/letra_a"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/imgDois"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/letra_e"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/imageTres"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        android:src="@drawable/letra_i"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/imageUm"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/imgQuatro"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        android:src="@drawable/letra_o"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/imgDois"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/imageCinco"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        android:src="@drawable/letra_u"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/imageTres"
+        tools:ignore="ContentDescription" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
