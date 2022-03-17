@@ -1,5 +1,6 @@
 package com.example.aprendaingles.Fragments;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -15,6 +16,7 @@ import com.example.aprendaingles.R;
 public class BichosFragment extends Fragment implements View.OnClickListener{
 
     ImageButton imageUm, imgDois, imageTres, imgQuatro, imageCinco, imgSeis;
+    MediaPlayer mediaPlayer;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
