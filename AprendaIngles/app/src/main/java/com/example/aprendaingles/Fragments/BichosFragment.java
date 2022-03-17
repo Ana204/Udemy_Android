@@ -42,6 +42,10 @@ public class BichosFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
-        Log.i("Elemento clicado", "item: " + view.getId());
+
+        switch ( view.getId() ){
+            case R.id.imageUm :
+                break;
+        }
     }
 }
