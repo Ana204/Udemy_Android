@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,7 @@ import android.widget.ImageButton;
 
 import com.example.aprendaingles.R;
 
-public class BichosFragment extends Fragment {
+public class BichosFragment extends Fragment implements View.OnClickListener{
 
     ImageButton imageUm, imgDois, imageTres, imgQuatro, imageCinco, imgSeis;
 
@@ -28,6 +29,14 @@ public class BichosFragment extends Fragment {
         imageCinco = view.findViewById(R.id.imageCinco);
         imgSeis = view.findViewById(R.id.imgSeis);
 
+        imageUm.setOnClickListener(this);
+        imgDois.setOnClickListener(this);
+
         return view;
+    }
+
+    @Override
+    public void onClick(View view) {
+        Log.i("Elemento clicado", "item: " + view.getId());
     }
 }

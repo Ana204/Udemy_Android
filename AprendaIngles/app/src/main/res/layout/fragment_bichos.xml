@@ -36,40 +36,44 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imageTres"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/leao"
+        android:background="@android:color/transparent"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toBottomOf="@id/imageUm"
         tools:ignore="ContentDescription" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imgQuatro"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/macaco"
+        android:background="@android:color/transparent"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintTop_toBottomOf="@id/imgDois"
         tools:ignore="ContentDescription" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imageCinco"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:background="@android:color/transparent"
         android:src="@drawable/ovelha"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toBottomOf="@id/imageTres"
         tools:ignore="ContentDescription" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imgSeis"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:background="@android:color/transparent"
         android:src="@drawable/vaca"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
