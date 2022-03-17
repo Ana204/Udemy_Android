@@ -18,8 +18,8 @@
 
     <ImageButton
         android:id="@+id/imageUm"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:src="@drawable/letra_a"
         android:scaleType="centerCrop"
         android:background="@android:color/transparent"
@@ -30,8 +30,8 @@
 
     <ImageButton
         android:id="@+id/imgDois"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:src="@drawable/letra_e"
         android:scaleType="centerCrop"
         android:background="@android:color/transparent"
@@ -42,8 +42,8 @@
 
     <ImageButton
         android:id="@+id/imageTres"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:scaleType="centerCrop"
         android:background="@android:color/transparent"
         android:src="@drawable/letra_i"
@@ -54,8 +54,8 @@
 
     <ImageButton
         android:id="@+id/imgQuatro"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:scaleType="centerCrop"
         android:background="@android:color/transparent"
         android:src="@drawable/letra_o"
@@ -66,8 +66,8 @@
 
     <ImageButton
         android:id="@+id/imageCinco"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:scaleType="centerCrop"
         android:background="@android:color/transparent"
         android:src="@drawable/letra_u"
