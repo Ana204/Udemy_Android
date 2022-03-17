@@ -29,8 +29,13 @@ public class BichosFragment extends Fragment implements View.OnClickListener{
         imageCinco = view.findViewById(R.id.imageCinco);
         imgSeis = view.findViewById(R.id.imgSeis);
 
+        //setando o evento de onclick, passando apenas this para que a class seja responsavel por criar o evento de click
         imageUm.setOnClickListener(this);
         imgDois.setOnClickListener(this);
+        imageTres.setOnClickListener(this);
+        imgQuatro.setOnClickListener(this);
+        imageCinco.setOnClickListener(this);
+        imgSeis.setOnClickListener(this);
 
         return view;
     }
