@@ -48,7 +48,21 @@ public class BichosFragment extends Fragment implements View.OnClickListener{
         switch ( view.getId() ){
             case R.id.imageUm :
                 mediaPlayer = MediaPlayer.create(getActivity(), R.raw.dog);
+                Som();
                 break;
+        }
+    }
+
+    public void Som(){
+        if (mediaPlayer != null ){
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    mediaPlayer.release();
+                }
+            });
         }
     }
 }
