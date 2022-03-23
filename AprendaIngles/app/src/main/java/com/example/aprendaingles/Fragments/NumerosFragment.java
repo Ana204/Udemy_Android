@@ -33,6 +33,11 @@ public class NumerosFragment extends Fragment implements View.OnClickListener{
         imgSeis = view.findViewById(R.id.imgSeis);
 
         imageUm.setOnClickListener(this);
+        imgDois.setOnClickListener(this);
+        imageTres.setOnClickListener(this);
+        imgQuatro.setOnClickListener(this);
+        imageCinco.setOnClickListener(this);
+        imgSeis.setOnClickListener(this);
 
        return view;
     }
@@ -43,6 +48,26 @@ public class NumerosFragment extends Fragment implements View.OnClickListener{
         switch( view.getId() ){
             case R.id.imageUm:
                 mediaPlayer = MediaPlayer.create(getActivity(), R.raw.one);
+                som();
+                break;
+            case R.id.imgDois:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.two);
+                som();
+                break;
+            case R.id.imageTres:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.three);
+                som();
+                break;
+            case R.id.imgQuatro:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.four);
+                som();
+                break;
+            case R.id.imageCinco:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.five);
+                som();
+                break;
+            case R.id.imgSeis:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.six);
                 som();
                 break;
         }
