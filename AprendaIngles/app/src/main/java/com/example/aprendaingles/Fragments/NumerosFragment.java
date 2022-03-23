@@ -1,5 +1,6 @@
 package com.example.aprendaingles.Fragments;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.Switch;
 
 import com.example.aprendaingles.R;
 
@@ -15,6 +17,7 @@ import com.example.aprendaingles.R;
 public class NumerosFragment extends Fragment implements View.OnClickListener{
 
     ImageButton imageUm, imgDois, imageTres, imgQuatro, imageCinco, imgSeis;
+    MediaPlayer mediaPlayer;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,11 +32,24 @@ public class NumerosFragment extends Fragment implements View.OnClickListener{
         imageCinco = view.findViewById(R.id.imageCinco);
         imgSeis = view.findViewById(R.id.imgSeis);
 
+        imageUm.setOnClickListener(this);
+
        return view;
     }
 
     @Override
     public void onClick(View view) {
 
+        switch( view.getId() ){
+            case R.id.imageUm:
+                break;
+        }
+    }
+
+    public void som(){
+
+        if (mediaPlayer != null){
+            mediaPlayer.start();
+        }
     }
 }
