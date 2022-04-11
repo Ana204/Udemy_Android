@@ -28,6 +28,7 @@
         android:hint="@string/editName"
         android:backgroundTint="@color/color_orange"
         android:textColorHint="@color/color_orange"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:layout_margin="16dp"
         app:layout_constraintEnd_toEndOf="parent"
