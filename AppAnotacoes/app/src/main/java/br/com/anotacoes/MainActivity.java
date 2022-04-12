@@ -1,5 +1,6 @@
 package br.com.anotacoes;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -20,12 +21,14 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+    private PreferencesAnnotation preferencesAnnotation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        preferencesAnnotation = new PreferencesAnnotation(getApplicationContext());
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
