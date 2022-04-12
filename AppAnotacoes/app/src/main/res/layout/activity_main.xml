@@ -11,6 +11,13 @@
         android:layout_height="100dp"
         android:theme="@style/Theme.Anotacoes.AppBarOverlay">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:src="@drawable/logo"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            />
 
     </com.google.android.material.appbar.AppBarLayout>
 
