@@ -9,6 +9,7 @@ public class PreferencesAnnotation {
     private SharedPreferences preferences;
     private SharedPreferences.Editor editor;
     private final String FILE_NAME = "anotacion.pref";
+    private final String NAME = "nome";
 
     public PreferencesAnnotation(Context context){
         this.context = context;
@@ -16,12 +17,13 @@ public class PreferencesAnnotation {
         editor = preferences.edit();
     }
 
-    public void salvarAnnotation(){
-
+    public void salvarAnnotation(String anotacao){
+        editor.putString(NAME, anotacao);
+        editor.commit();
     }
 
     public String getAnnotation(){
 
-        return "";
+        return preferences.getString(NAME, "null");
     }
 }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey_light"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -21,7 +22,19 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_light"
+        android:ems="10"
+        android:layout_marginTop="110dp"
+        android:hint="Digite suas anotações"
+        android:textColor="@color/white"
+        android:inputType="textMultiLine"
+        android:padding="16dp"
+        android:singleLine="false"
+        android:textColorHint="@color/white" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
