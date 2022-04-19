@@ -17,8 +17,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().hide();
-
         fab = findViewById(R.id.fab);
 
         fab.setOnClickListener(new View.OnClickListener() {
