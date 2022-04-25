@@ -1,8 +1,10 @@
-package br.com.lista_tarefas;
+package br.com.lista_tarefas.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import br.com.lista_tarefas.R;
 
 public class add_tarefas extends AppCompatActivity {
 
