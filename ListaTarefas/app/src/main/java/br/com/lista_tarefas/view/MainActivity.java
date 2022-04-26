@@ -8,7 +8,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 
 import com.google.android.material.divider.MaterialDividerItemDecoration;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -18,6 +20,7 @@ import java.util.List;
 
 import br.com.lista_tarefas.R;
 import br.com.lista_tarefas.adapter.Adapter;
+import br.com.lista_tarefas.helper.RecyclerItemClickListener;
 import br.com.lista_tarefas.model.Tarefa;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,6 +37,26 @@ public class MainActivity extends AppCompatActivity {
 
         fab = findViewById(R.id.fab);
         recyclerViewTarefas = findViewById(R.id.recyclerViewTarefas);
+
+        recyclerViewTarefas.addOnItemTouchListener(
+                new RecyclerItemClickListener(getApplicationContext(), recyclerViewTarefas,
+                        new RecyclerItemClickListener.OnItemClickListener() {
+                            @Override
+                            public void onItemClick(View view, int position) {
+                                Log.i("CLICK", "onItemClick: ");
+                            }
+
+                            @Override
+                            public void onLongItemClick(View view, int position) {
+                                Log.i("CLICK", "onLongItemClick: ");
+                            }
+
+                            @Override
+                            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                            }
+                        })
+        );
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
