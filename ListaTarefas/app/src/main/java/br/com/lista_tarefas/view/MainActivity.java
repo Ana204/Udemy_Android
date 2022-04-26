@@ -2,6 +2,7 @@ package br.com.lista_tarefas.view;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         //list tarefas
         Tarefa tarefa1 = new Tarefa();
-        tarefa1.setNomeTarefa("Ir ao mercado");
+        tarefa1.setNomeTarefa("Ir ao shopping ");
         listaTarefas.add(tarefa1);
 
         Tarefa tarefa2 = new Tarefa();
@@ -62,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerViewTarefas.setLayoutManager(layoutManager);
         recyclerViewTarefas.setHasFixedSize(true);
-        recyclerViewTarefas.addItemDecoration(new MaterialDividerItemDecoration(getApplicationContext(), LinearLayoutManager.VERTICAL));
+        recyclerViewTarefas.addItemDecoration(new DividerItemDecoration(getApplicationContext(), LinearLayoutManager.VERTICAL));
+        recyclerViewTarefas.setAdapter(adapter);
+    }
+
+    @Override
+    protected void onStart() {
+        loadList();
+        super.onStart();
     }
 }
