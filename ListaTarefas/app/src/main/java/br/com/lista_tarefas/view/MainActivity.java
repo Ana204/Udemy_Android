@@ -40,10 +40,6 @@ public class MainActivity extends AppCompatActivity {
         fab = findViewById(R.id.fab);
         recyclerViewTarefas = findViewById(R.id.recyclerViewTarefas);
 
-        DbHelper db = new DbHelper(getApplicationContext());
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("nome", "Teste");
-        db.getWritableDatabase().insert("tarefas", null,contentValues );
 
         recyclerViewTarefas.addOnItemTouchListener(
                 new RecyclerItemClickListener(getApplicationContext(), recyclerViewTarefas,
