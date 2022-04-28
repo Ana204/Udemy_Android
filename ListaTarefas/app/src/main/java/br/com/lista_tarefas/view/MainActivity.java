@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +21,7 @@ import java.util.List;
 
 import br.com.lista_tarefas.R;
 import br.com.lista_tarefas.adapter.Adapter;
+import br.com.lista_tarefas.helper.DbHelper;
 import br.com.lista_tarefas.helper.RecyclerItemClickListener;
 import br.com.lista_tarefas.model.Tarefa;
 
@@ -37,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
 
         fab = findViewById(R.id.fab);
         recyclerViewTarefas = findViewById(R.id.recyclerViewTarefas);
+
+        DbHelper db = new DbHelper(getApplicationContext());
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("nome", "Teste");
+        db.getWritableDatabase().insert("tarefas", null,contentValues );
 
         recyclerViewTarefas.addOnItemTouchListener(
                 new RecyclerItemClickListener(getApplicationContext(), recyclerViewTarefas,
