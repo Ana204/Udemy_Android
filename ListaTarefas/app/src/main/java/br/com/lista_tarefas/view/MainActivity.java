@@ -23,6 +23,7 @@ import br.com.lista_tarefas.R;
 import br.com.lista_tarefas.adapter.Adapter;
 import br.com.lista_tarefas.helper.DbHelper;
 import br.com.lista_tarefas.helper.RecyclerItemClickListener;
+import br.com.lista_tarefas.helper.TarefaDAO;
 import br.com.lista_tarefas.model.Tarefa;
 
 public class MainActivity extends AppCompatActivity {
@@ -75,13 +76,8 @@ public class MainActivity extends AppCompatActivity {
     public void loadList(){
 
         //list tarefas
-        Tarefa tarefa1 = new Tarefa();
-        tarefa1.setNomeTarefa("Ir ao shopping ");
-        listaTarefas.add(tarefa1);
-
-        Tarefa tarefa2 = new Tarefa();
-        tarefa2.setNomeTarefa("Ir a feira");
-        listaTarefas.add(tarefa2);
+        TarefaDAO tarefaDAO = new TarefaDAO(getApplicationContext());
+        listaTarefas = tarefaDAO.listar();
 
         //config
         adapter = new Adapter(listaTarefas);

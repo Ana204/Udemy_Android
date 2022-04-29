@@ -2,9 +2,12 @@ package br.com.lista_tarefas.helper;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import br.com.lista_tarefas.model.Tarefa;
@@ -49,6 +52,33 @@ public class TarefaDAO implements InterfaceTarefaDAO{
 
     @Override
     public List<Tarefa> listar() {
-        return null;
+
+        List<Tarefa> tarefas = new ArrayList<>();
+
+        String sql = "SELECT * FROM " + DbHelper.TABELA_NAME;
+
+        try{
+            Cursor cursor = read.rawQuery(sql, null);
+
+            while ( cursor.moveToNext() ){
+
+                Tarefa tarefa = new Tarefa();
+
+                long id = cursor.getLong( cursor.getColumnIndex("id") );
+                String nomeTarefa = cursor.getString( cursor.getColumnIndex("nome") );
+
+                tarefa.setId( id );
+                tarefa.setNomeTarefa( nomeTarefa );
+
+                tarefas.add( tarefa );
+                Log.i("ERROR", tarefa.getNomeTarefa() );
+            }
+
+        }catch (SQLException e){
+            Log.e("ERROR", "Falha ao lisar: " + e.getMessage());
+        }
+
+
+        return tarefas;
     }
 }
