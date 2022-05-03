@@ -16,6 +16,7 @@ public class TarefaDAO implements InterfaceTarefaDAO{
 
     private SQLiteDatabase write;
     private SQLiteDatabase read;
+    ContentValues contentValues;
 
     public TarefaDAO(Context context){
         DbHelper db = new DbHelper(context);
@@ -27,7 +28,7 @@ public class TarefaDAO implements InterfaceTarefaDAO{
     @Override
     public boolean salvar(Tarefa tarefa) {
 
-        ContentValues contentValues = new ContentValues();
+        contentValues = new ContentValues();
         contentValues.put("nome", tarefa.getNomeTarefa());
 
         try{
@@ -42,7 +43,21 @@ public class TarefaDAO implements InterfaceTarefaDAO{
 
     @Override
     public boolean atualizar(Tarefa tarefa) {
-        return false;
+
+        contentValues = new ContentValues();
+        contentValues.put("nome", tarefa.getNomeTarefa());
+        int id = tarefa.getId();
+
+        try{
+            String[] args = {Integer.toString(id)};
+            write.update(DbHelper.TABELA_NAME, contentValues, "id=?", args);
+            Log.i("INFO", "TAREFA ATUALIZADA COM SUCESSO !!");
+
+        }catch (Exception e){
+            Log.e("INFO", "ERROR AO ATUALIZAR TAREFA: " + e.getMessage());
+            return false;
+        }
+        return true;
     }
 
     @Override
@@ -64,10 +79,10 @@ public class TarefaDAO implements InterfaceTarefaDAO{
 
                 Tarefa tarefa = new Tarefa();
 
-                long id = cursor.getLong( cursor.getColumnIndex("id") );
+                int id = cursor.getInt( cursor.getColumnIndex("id") );
                 String nomeTarefa = cursor.getString( cursor.getColumnIndex("nome") );
 
-                tarefa.setId( id );
+                tarefa.setId(id);
                 tarefa.setNomeTarefa( nomeTarefa );
 
                 tarefas.add( tarefa );
