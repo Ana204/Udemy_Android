@@ -14,6 +14,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
@@ -75,7 +76,10 @@ public class MainActivity extends AppCompatActivity {
         //users.push().setValue(user);
 
         //filter event
-        DatabaseReference filterUser = users.child("-N1oGV06VwZO1im9URsS");
+        //DatabaseReference filterUser = users.child("");
+        Query filterUser = users.orderByChild("firstName").equalTo("Ana");
+
+
         filterUser.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
