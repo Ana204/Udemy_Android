@@ -31,11 +31,12 @@ public class MainActivity extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference();
         firebaseAuth = FirebaseAuth.getInstance();
 
+        firebaseAuth.signOut();
+
         if (firebaseAuth.getCurrentUser() != null)
             Log.i("CreateUser", "Usuario logado !");
         else
             Log.i("CreateUser", "Usuario não logado");
-
 /*        firebaseAuth.createUserWithEmailAndPassword("analucia@gmail.com", "ana123")
                 .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
