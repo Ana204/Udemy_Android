@@ -32,9 +32,8 @@ public class MainActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         //checking if the user is logged out
-        //firebaseAuth.signOut();
 
-        firebaseAuth.signInWithEmailAndPassword("analucia@gmail.com", "ana123")
+/*        firebaseAuth.signInWithEmailAndPassword("analucia@gmail.com", "ana123")
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -45,10 +44,11 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+         //firebaseAuth.signOut();
         if (firebaseAuth.getCurrentUser() != null)
             Log.i("CreateUser", "Usuario logado !");
         else
-            Log.i("CreateUser", "Usuario não logado");
+            Log.i("CreateUser", "Usuario não logado");*/
 /*        firebaseAuth.createUserWithEmailAndPassword("analucia@gmail.com", "ana123")
                 .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -67,12 +67,12 @@ public class MainActivity extends AppCompatActivity {
     public void addUsers(){
         user = new Users();
 
-        /*user.setFirstName("Maria");
-        user.setSecondName("Ferreira");
-        user.setAge(25);*/
+        user.setFirstName("Ana");
+        user.setSecondName("Gomes");
+        user.setAge(21);
 
         DatabaseReference users = reference.child("Users");
-       //users.child("001").setValue(user);
+        users.push().setValue(user);
 
 /*        users.addValueEventListener(new ValueEventListener() {
             @Override
