@@ -6,6 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -17,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference reference;
     private Users user;
     private Product product;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         reference = FirebaseDatabase.getInstance().getReference();
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        if (firebaseAuth.getCurrentUser() != null)
+            Log.i("CreateUser", "Usuario logado !");
+        else
+            Log.i("CreateUser", "Usuario não logado");
+
+/*        firebaseAuth.createUserWithEmailAndPassword("analucia@gmail.com", "ana123")
+                .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful())
+                            Log.i("CreateUser", "Sucesso ao cadastrar usuario! ");
+                        else
+                            Log.i("CreateUser", "Erro ao cadastrar usuario! ");
+                    }
+                });*/
+
         addUsers();
         addProduct();
     }
@@ -38,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         DatabaseReference users = reference.child("Users");
        //users.child("001").setValue(user);
 
-        users.addValueEventListener(new ValueEventListener() {
+/*        users.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Log.i("FIREBASEONDATA", "firebase" + snapshot.getValue());
@@ -48,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
-        });
+        });*/
     }
 
     public void addProduct(){
@@ -61,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         DatabaseReference products = reference.child("Product");
         //products.child("003").setValue(product);
 
-        products.addValueEventListener(new ValueEventListener() {
+/*        products.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Log.i("FirebaseProduct", "PRODUCT: " + snapshot.getValue());
@@ -71,6 +94,6 @@ public class MainActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
-        });
+        });*/
     }
 }
