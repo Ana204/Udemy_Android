@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference();
         firebaseAuth = FirebaseAuth.getInstance();
 
-        //checking if the user is logged out
 
 /*        firebaseAuth.signInWithEmailAndPassword("analucia@gmail.com", "ana123")
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -44,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+          //checking if the user is logged out
          //firebaseAuth.signOut();
         if (firebaseAuth.getCurrentUser() != null)
             Log.i("CreateUser", "Usuario logado !");
@@ -67,12 +67,29 @@ public class MainActivity extends AppCompatActivity {
     public void addUsers(){
         user = new Users();
 
-        user.setFirstName("Ana");
-        user.setSecondName("Gomes");
-        user.setAge(21);
+        /*user.setFirstName("Jose");
+        user.setSecondName("Martins");
+        user.setAge(21);*/
 
         DatabaseReference users = reference.child("Users");
-        users.push().setValue(user);
+        //users.push().setValue(user);
+
+        //filter event
+        DatabaseReference filterUser = users.child("-N1oGV06VwZO1im9URsS");
+        filterUser.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                //Users dadosUser = snapshot.getValue(Users.class);
+                //Log.i("DADOS USERS", "NOME: " + dadosUser.getFirstName());
+
+               Log.i("DADOS USERS", snapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
 /*        users.addValueEventListener(new ValueEventListener() {
             @Override
