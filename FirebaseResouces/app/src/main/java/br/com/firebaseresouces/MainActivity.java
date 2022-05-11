@@ -31,7 +31,19 @@ public class MainActivity extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference();
         firebaseAuth = FirebaseAuth.getInstance();
 
-        firebaseAuth.signOut();
+        //checking if the user is logged out
+        //firebaseAuth.signOut();
+
+        firebaseAuth.signInWithEmailAndPassword("analucia@gmail.com", "ana123")
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful())
+                            Log.i("loginUser", "Usuario logado com sucesso !!");
+                        else
+                            Log.i("loginUser", "Erro ao tentar fazer login !!");
+                    }
+                });
 
         if (firebaseAuth.getCurrentUser() != null)
             Log.i("CreateUser", "Usuario logado !");
