@@ -77,7 +77,8 @@ public class MainActivity extends AppCompatActivity {
 
         //filter event
         //DatabaseReference filterUser = users.child("");
-        Query filterUser = users.orderByChild("firstName").equalTo("Ana");
+        //Query filterUser = users.orderByChild("firstName").equalTo("Ana");
+        Query filterUser = users.orderByKey().limitToFirst(2);
 
 
         filterUser.addValueEventListener(new ValueEventListener() {
