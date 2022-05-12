@@ -68,9 +68,9 @@ public class MainActivity extends AppCompatActivity {
     public void addUsers(){
         user = new Users();
 
-        /*user.setFirstName("Jose");
-        user.setSecondName("Martins");
-        user.setAge(21);*/
+        /*user.setFirstName("Maria");
+        user.setSecondName("Silva");
+        user.setAge(41)*/;
 
         DatabaseReference users = reference.child("Users");
         //users.push().setValue(user);
@@ -78,7 +78,14 @@ public class MainActivity extends AppCompatActivity {
         //filter event
         //DatabaseReference filterUser = users.child("");
         //Query filterUser = users.orderByChild("firstName").equalTo("Ana");
-        Query filterUser = users.orderByKey().limitToFirst(2);
+        //Query filterUser = users.orderByKey().limitToFirst(2);
+        //Query filterUser = users.orderByKey().limitToLast(2);
+
+        //>= startAt, >= endAt and in between
+        //Query filterUser = users.orderByChild("age").startAt(30);
+        //Query filterUser = users.orderByChild("age").endAt(21);
+        //Query filterUser = users.orderByChild("age").startAt(21).endAt(30);
+          Query filterUser = users.orderByChild("firstName").startAt("J").endAt("J" + "\uf8ff");
 
 
         filterUser.addValueEventListener(new ValueEventListener() {
