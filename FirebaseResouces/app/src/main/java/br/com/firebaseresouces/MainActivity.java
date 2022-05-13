@@ -3,10 +3,19 @@ package br.com.firebaseresouces;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -16,6 +25,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     private Users user;
     private Product product;
     private FirebaseAuth firebaseAuth;
+    private Button uploadButton;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
 
         reference = FirebaseDatabase.getInstance().getReference();
         firebaseAuth = FirebaseAuth.getInstance();
+        uploadButton = findViewById(R.id.UploadImage);
+        imageView = findViewById(R.id.imageView);
 
 
 /*        firebaseAuth.signInWithEmailAndPassword("analucia@gmail.com", "ana123")
@@ -60,9 +80,76 @@ public class MainActivity extends AppCompatActivity {
                             Log.i("CreateUser", "Erro ao cadastrar usuario! ");
                     }
                 });*/
-
+        uploadImage();
         addUsers();
         addProduct();
+    }
+
+    public void uploadImage(){
+        uploadButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //configurando image para ser salva em  memoria
+                imageView.setDrawingCacheEnabled(true);
+                imageView.buildDrawingCache();
+
+                //recuperar image em bitmap(image a ser carregada)
+                Bitmap bitmap = imageView.getDrawingCache();
+
+                //comprimento bitmap para formato png/jpg
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 75,baos );
+
+                //converter o boas para pixel brutos em uma matriz de bytes
+                byte[] dadosImage = baos.toByteArray();
+
+                StorageReference storageReference = FirebaseStorage.getInstance().getReference();
+                StorageReference imagens = storageReference.child("imagens");
+                //StorageReference imageRef = imagens.child("a7ea01ea-b9a0-4c2a-95ae-73abeb9c9cfd.jpeg");
+
+                //String nomeArquivo = UUID.randomUUID().toString();
+                StorageReference imageRef = imagens.child("celular.jpeg");
+
+                //deletar image
+                /*imageRef.delete().addOnFailureListener(MainActivity.this, new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(MainActivity.this, "Erro ao deletar", Toast.LENGTH_LONG).show();
+                    }
+                }).addOnSuccessListener(MainActivity.this, new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(MainActivity.this, "Sucesso ao deletar imagem", Toast.LENGTH_LONG).show();
+                    }
+                });*/
+
+                //obj controla o upload
+               /* UploadTask uploadTask = imageRef.putBytes(dadosImage);
+
+                uploadTask.addOnFailureListener(MainActivity.this, new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(MainActivity.this, "Upload da imagem falhou: " + e.getMessage().toString(), Toast.LENGTH_LONG).show();
+                    }
+                }).addOnSuccessListener(MainActivity.this, new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        imageRef.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Uri> task) {
+                                Uri url = task.getResult();
+                                Toast.makeText(MainActivity.this, "Sucesso ao fazer upload", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                });*/
+
+                //download image
+                /*Glide.with(MainActivity.this)
+                        .load(imageRef)
+                        .into(imageView);*/
+            }
+        });
     }
 
     public void addUsers(){
